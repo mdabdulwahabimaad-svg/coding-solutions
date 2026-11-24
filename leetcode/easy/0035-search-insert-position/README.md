@@ -11,7 +11,7 @@ You must write an algorithm with `O(log n)` runtime complexity.
  
 
 Original
-C++
+C
  **Example 1:** 
 
 ```
@@ -47,35 +47,32 @@ Output: 4
 
 ## Solution
 
-**Language:** C++  
+**Language:** C  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 13.6 MB (beats 76.64%)  
-**Submitted:** 2026-11-24T15:33:59.726Z  
+**Memory:** 8.6 MB (beats 97.10%)  
+**Submitted:** 2026-11-24T16:15:00.650Z  
 
-```cpp
-class Solution {
-public:
-    int searchInsert(vector<int>& nums, int target) {
-        int left = 0;
-        int right = nums.size() - 1;
+```c
+int searchInsert(int* nums, int numsSize, int target) {
+    int left = 0;
+    int right = numsSize - 1;
 
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
 
-            if (nums[mid] == target) {
-                return mid;
-            }
-            else if (nums[mid] < target) {
-                left = mid + 1;
-            }
-            else {
-                right = mid - 1;
-            }
+        if (nums[mid] == target) {
+            return mid;
         }
-
-        return left;
+        else if (nums[mid] < target) {
+            left = mid + 1;
+        }
+        else {
+            right = mid - 1;
+        }
     }
-};
+
+    return left;
+}
 ```
 
 ---
