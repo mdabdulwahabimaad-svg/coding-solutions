@@ -45,9 +45,9 @@ Output: [[1,2],[3,4]]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 48.50%)  
+**Runtime:** 2 ms (beats 25.21%)  
 **Memory:** 14.9 MB (beats 84.04%)  
-**Submitted:** 2026-11-24T15:31:15.412Z  
+**Submitted:** 2026-11-24T15:31:57.106Z  
 
 ```cpp
 class Solution {
